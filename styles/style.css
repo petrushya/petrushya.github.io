@@ -1,0 +1,41 @@
+html {
+  font-size: 12px;
+  font-family: 'Merriweather', serif;
+}
+
+body {
+  margin: 0;
+  background-color: #00bfff;
+}
+
+section {
+  margin: 15px auto;
+  padding: 0 20px 20px 20px;
+  width: 600px;
+  min-height: 300px;
+  background-color: #ffa500;
+  border: 5px solid black;
+}
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: #000080;
+  text-shadow: 4px 4px 7px cyan;
+  font-size: 60px;
+  text-align: center;
+}
+
+p, li {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  letter-spacing: .5px;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+a {
+  color: #000080;
+}
