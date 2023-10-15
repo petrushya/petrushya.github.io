@@ -1,4 +1,0 @@
----
-title: Strawhead
----
-# Hello World
