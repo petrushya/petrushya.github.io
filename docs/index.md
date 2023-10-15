@@ -1,5 +1,4 @@
 ---
-site_name: Strawhead
-title: home
+title: Strawhead
 ---
 # Hello World
