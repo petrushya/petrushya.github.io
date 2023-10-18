@@ -642,14 +642,15 @@ footer a {
   .mobile-menu {
     display: block;
     cursor: pointer;
+    font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
     font-size: 2rem;
     font-weight: bold;
     line-height: 1.75rem;
     background-color: rgba(0, 0, 255, 0.4588235294);
     border: 0.05rem solid rgba(0, 0, 255, 0.3137254902);
     border-radius: 0.3rem;
-    margin: 0.75rem 0;
-    padding: 0.1rem 0.40625rem 0.4rem;
+    margin: 1rem 0;
+    padding: 0 0.5rem;
   }
   #main-nav {
     flex-flow: column nowrap;
