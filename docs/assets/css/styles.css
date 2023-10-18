@@ -1,0 +1,771 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Marck+Script&family=Noto+Color+Emoji&family=Noto+Sans&family=Noto+Sans+Mono&family=Noto+Sans+Symbols&display=swap");
+@font-face {
+  font-family: "aliceregular";
+  src: url("../fonts/alice-regular-webfont.woff2") format("woff2"), url("../fonts/alice-regular-webfont.woff") format("woff"), url("../fonts/alice-regular-webfont.ttf") format("truetype"), url("../fonts/alice-regular-webfont.svg#aliceregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "marck_scriptregular";
+  src: url("../fonts/marckscript-regular-webfont.woff2") format("woff2"), url("../fonts/marckscript-regular-webfont.woff") format("woff"), url("../fonts/marckscript-regular-webfont.ttf") format("truetype"), url("../fonts/marckscript-regular-webfont.svg#marck_scriptregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "noto_sansregular";
+  src: url("../fonts/notosans-regular-webfont.woff2") format("woff2"), url("../fonts/notosans-regular-webfont.woff") format("woff"), url("../fonts/notosans-regular-webfont.ttf") format("truetype"), url("../fonts/notosans-regular-webfont.svg#noto_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NotoColorEmoji";
+  src: url("../fonts/NotoColorEmoji-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.highlighter-rouge {
+  background: rgba(0, 0, 0, 0.062745098);
+  overflow: scroll;
+  border-radius: 0.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.0823529412);
+}
+
+.c {
+  color: #998;
+  font-style: italic;
+}
+
+.err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+
+.k {
+  font-weight: bold;
+}
+
+.o {
+  font-weight: bold;
+}
+
+.cm, .c1 {
+  color: rgba(0, 0, 0, 0.6);
+  font-style: italic;
+}
+
+.cp {
+  color: #999;
+  font-weight: bold;
+}
+
+.cs {
+  color: #999;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.gd {
+  color: #000;
+  background-color: #fdd;
+}
+
+.gd .x {
+  color: #000;
+  background-color: #faa;
+}
+
+.ge {
+  font-style: italic;
+}
+
+.gr {
+  color: #a00;
+}
+
+.gh {
+  color: #999;
+}
+
+.gi {
+  color: #000;
+  background-color: #dfd;
+}
+
+.gi .x {
+  color: #000;
+  background-color: #afa;
+}
+
+.go {
+  color: #888;
+}
+
+.gp {
+  color: #555;
+}
+
+.gs {
+  font-weight: bold;
+}
+
+.gu {
+  color: #aaa;
+}
+
+.gt {
+  color: #a00;
+}
+
+.kc {
+  font-weight: bold;
+}
+
+.kd {
+  font-weight: bold;
+}
+
+.kp {
+  font-weight: bold;
+}
+
+.kr {
+  font-weight: bold;
+}
+
+.kt {
+  color: #458;
+  font-weight: bold;
+}
+
+.m {
+  color: #099;
+}
+
+.s {
+  color: #d14;
+}
+
+.na {
+  color: #008080;
+}
+
+.nb {
+  color: #0086B3;
+}
+
+.nc {
+  color: #458;
+  font-weight: bold;
+}
+
+.no {
+  color: #008080;
+}
+
+.ni {
+  color: #800080;
+}
+
+.ne {
+  color: #900;
+  font-weight: bold;
+}
+
+.nf {
+  color: #900;
+  font-weight: bold;
+}
+
+.nn {
+  color: #555;
+}
+
+.nt {
+  color: #000080;
+}
+
+.nv {
+  color: #008080;
+}
+
+.ow {
+  font-weight: bold;
+}
+
+.w {
+  color: #bbb;
+}
+
+.mf {
+  color: #099;
+}
+
+.mh {
+  color: #099;
+}
+
+.mi {
+  color: #099;
+}
+
+.mo {
+  color: #099;
+}
+
+.sb {
+  color: #d14;
+}
+
+.sc {
+  color: #d14;
+}
+
+.sd {
+  color: #d14;
+}
+
+.s2 {
+  color: #d14;
+}
+
+.se {
+  color: #d14;
+}
+
+.sh {
+  color: #d14;
+}
+
+.si {
+  color: #d14;
+}
+
+.sx {
+  color: #d14;
+}
+
+.sr {
+  color: #009926;
+}
+
+.s1 {
+  color: #d14;
+}
+
+.ss {
+  color: #990073;
+}
+
+.bp {
+  color: #999;
+}
+
+.vc {
+  color: #008080;
+}
+
+.vg {
+  color: #008080;
+}
+
+.vi {
+  color: #008080;
+}
+
+.il {
+  color: #099;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: rgb(254, 254, 254);
+  font-family: "Noto Sans", "noto_sansregular", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(25, 25, 112);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Alice", "aliceregular", serif;
+  line-height: 3rem;
+}
+
+h1 {
+  font-size: 1.75rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1.05rem;
+}
+
+p {
+  hyphens: auto;
+}
+
+a, a:visited {
+  color: mediumblue;
+}
+
+ol, ul {
+  margin-left: 5%;
+  border: none;
+}
+ol li ol, ol li ul, ul li ol, ul li ul {
+  margin-left: 5%;
+}
+
+li::marker {
+  line-height: 1.25rem;
+}
+
+.itemList ul, .itemList ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.itemList ul li h2, .itemList ol li h2 {
+  margin-left: 2rem;
+}
+
+abbr {
+  cursor: pointer;
+}
+abbr:focus::before {
+  font-family: "Noto Sans", "noto_sansregular", sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  position: absolute;
+  visibility: visible;
+  max-width: 7.8em;
+  border: 1px dotted #000000;
+  content: attr(title);
+  line-height: 1em;
+  padding: 0.2em;
+  background-color: #f5f5f5;
+  color: #000000;
+}
+
+.simbol {
+  font-family: "Noto Sans Symbols 2", sans-serif;
+}
+
+.emoji {
+  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  font-size: 1.25rem;
+  line-height: 0.9rem;
+}
+
+code {
+  font-family: "Noto Sans Mono", Courier New, Lucida Console, monospace;
+  font-size: 0.95rem;
+  line-height: 1rem;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+  border: 2px solid rgba(0, 0, 0, 0.0823529412);
+  background-color: rgba(0, 0, 0, 0.062745098);
+  color: #000000;
+}
+
+.highlighter-rouge {
+  margin: 0.375rem 0;
+}
+
+pre {
+  padding: calc(0.375rem - 2px) 0.75rem;
+}
+
+pre > code {
+  padding: unset;
+  background-color: unset;
+  border: unset;
+}
+
+.rightside {
+  padding: 1.5rem 10% 0 38%;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0.75rem 0 calc(0.75rem - 1px) 0;
+}
+table td, table th {
+  border: 1px solid black;
+}
+table td, table th {
+  height: calc(3rem - 1px);
+  padding: 0 1rem;
+}
+
+th {
+  font-size: large;
+}
+
+body {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 50rem;
+  margin: 0 auto;
+  background: url("../images/redline.svg") 86.5% top/2px repeat-y, linear-gradient(to left, #f5f5f5, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, #f5f5f5), url("../images/kletka.svg") left top/8rem 24rem repeat, #fefefe;
+  box-shadow: 0 0 0.2rem lightgray;
+  filter: drop-shadow(0 0 0.2rem lightgray);
+  color: rgb(25, 25, 112);
+}
+
+header {
+  width: 100%;
+  height: 4.5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  background: url("../images/topchik.svg") center top/100% 100% no-repeat, linear-gradient(to left, #f5f5f5, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, #f5f5f5), #fefefe;
+  padding: 0 1.5rem;
+}
+
+section {
+  margin-bottom: 1.5rem;
+}
+
+.stitle {
+  align-self: center;
+}
+.stitle a {
+  display: block;
+  height: 2rem;
+}
+
+.cool {
+  height: 2rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+#main-nav {
+  visibility: visible;
+  align-self: flex-end;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-bottom: 0.25rem;
+}
+#main-nav a {
+  font-family: "Alice", "aliceregular", serif;
+  font-size: 1.375rem;
+  text-decoration: none;
+  margin: 0 0.05rem;
+  padding: 0.1rem 0.75rem 0.25rem;
+  border: 2px solid rgba(25, 25, 112, 0.25);
+  border-radius: 1rem;
+  color: rgb(25, 25, 112);
+}
+#main-nav a:visited {
+  color: rgb(25, 25, 112);
+}
+#main-nav .activePage {
+  padding-left: 0.35rem;
+}
+#main-nav .activePage::a:visited {
+  color: darkred;
+}
+#main-nav .activePage::before {
+  display: inline-block;
+  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  content: "🌟";
+  font-size: 1.15rem;
+  margin-right: 0.25rem;
+}
+#main-nav .subPage {
+  color: darkred !important;
+}
+#main-nav .subPage::after {
+  content: "…";
+  color: darkred;
+  margin-left: 0;
+}
+
+#subpage-nav {
+  display: none;
+}
+
+main {
+  width: 82%;
+  min-height: 80vh;
+  margin-left: 4%;
+}
+
+main > h1:first-child, hgroup h1 {
+  font-size: 200%;
+  margin: 0.875rem auto;
+  text-align: center;
+  text-shadow: 0 0 1.5rem rgba(25, 25, 112, 0.75);
+}
+
+#myhello {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#myhello .scarec {
+  align-self: start;
+  margin: 1rem 0.5rem 0 0;
+}
+#myhello .helloW {
+  flex: 3;
+}
+#myhello .helloW h1::before {
+  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  content: "👋";
+  font-size: 1.5rem;
+  line-height: 0.8;
+  margin-right: 0.3rem;
+}
+
+aside {
+  width: 13.4%;
+  box-sizing: border-box;
+}
+aside nav {
+  background-color: rgba(255, 255, 0, 0.1450980392);
+  margin-top: 0.72rem;
+  padding: 0.75rem 0;
+  border: none;
+}
+aside nav a {
+  display: block;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Alice", "aliceregular", serif;
+  font-size: 1.15rem;
+  padding: 0.25rem 0.25rem 0.5rem 1.1rem;
+  margin-bottom: 0.75rem;
+  color: rgb(25, 25, 112) !important;
+}
+aside nav a:last-child {
+  margin-bottom: 0;
+}
+aside .activeUrl {
+  border: 4px solid rgba(0, 0, 0, 0.3137254902);
+  border-right: none;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  background: url("../images/asign.svg") left center/0.75rem 0.75rem no-repeat;
+  padding: calc(0.25rem - 4px) 0.25rem calc(0.5rem - 4px) calc(1.1rem - 4px);
+  color: darkred !important;
+}
+
+.firstpage {
+  margin: 1.5rem 0;
+  font-family: "Marck Script", "marck_scriptregular", coursive;
+}
+.firstpage p::first-letter {
+  font-weight: bolder;
+  color: maroon;
+}
+.firstpage p {
+  font-size: 1.5rem;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  background: url("../images/dungeon.svg") center bottom/100% 100% no-repeat, linear-gradient(to left, #f5f5f5, rgba(255, 255, 255, 0) 5%, rgba(255, 255, 255, 0) 95%, #f5f5f5), #fefefe;
+  padding: 1.5rem 3rem;
+  margin-top: 0.5rem;
+}
+footer a {
+  text-decoration: none;
+}
+
+.my-brand {
+  align-self: center;
+  font-weight: bolder;
+  border: none;
+}
+.my-brand p {
+  line-height: 1.625rem;
+  font-family: "Marck Script", "marck_scriptregular", coursive;
+}
+
+.social {
+  font-family: "Marck Script", "marck_scriptregular", coursive;
+}
+
+.svg-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  fill: #828282;
+  padding-right: 0.35rem;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 600px) {
+  #myhello .scarec {
+    height: 4.5rem;
+    margin-right: 0.5rem;
+  }
+  body {
+    overflow-x: hidden;
+  }
+  aside {
+    display: none;
+  }
+  .mobile-menu {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.75rem;
+    background-color: rgba(0, 0, 255, 0.4588235294);
+    border: 0.05rem solid rgba(0, 0, 255, 0.3137254902);
+    border-radius: 0.3rem;
+    margin: 0.75rem 0;
+    padding: 0.1rem 0.40625rem 0.4rem;
+  }
+  #main-nav {
+    flex-flow: column nowrap;
+    visibility: hidden;
+    position: absolute;
+    top: 4.4375rem;
+    right: 0;
+    min-width: 11rem;
+    max-width: 75%;
+    border-left: 1px solid rgba(25, 25, 112, 0.25);
+    border-bottom: 1px solid rgba(25, 25, 112, 0.25);
+    border-collaps: collaps;
+    background-color: #fff;
+  }
+  #main-nav a {
+    display: block;
+    height: auto;
+    background-color: #fff;
+    height: 2.5rem;
+    line-height: 2.4rem;
+    padding-left: 7.5%;
+    border: unset;
+    border-radius: unset;
+    border-top: 1px solid rgba(25, 25, 112, 0.25);
+  }
+  #main-nav #subpage-nav {
+    display: block;
+    max-height: 12rem;
+    overflow-y: auto;
+    background-color: #ffffff;
+  }
+  #main-nav #subpage-nav a {
+    background-color: #fff;
+    padding: 0.2rem 0.2rem 0.2rem 15%;
+    height: auto;
+    width: auto;
+    border: none;
+    border-top: 1px dotted darkred;
+    line-height: 2rem;
+    color: mediumblue;
+  }
+  #main-nav #subpage-nav .activeUrl {
+    background: url("../images/asign.svg") 0.5rem center/0.75rem 0.75rem no-repeat, #f5f5f5;
+    color: darkred;
+  }
+}
+#showDialog {
+  display: inline;
+  cursor: pointer;
+  line-height: 1.175rem;
+  padding: 0rem 0.15rem;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px dotted #4b0082;
+  font-size: 1rem;
+  color: rgb(25, 25, 112);
+}
+#showDialog::before {
+  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  content: "👉";
+  font-size: 1.1rem;
+  line-height: 0.9;
+  margin-right: 0.2rem;
+}
+#showDialog::after {
+  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  content: "👈";
+  font-size: 1.1rem;
+  line-height: 0.9;
+  margin-left: 0.2rem;
+}
+
+.greeting {
+  margin: auto auto;
+  border: solid 1px #4b0082;
+  border-radius: 1rem;
+}
+.greeting::backdrop {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.greeting form {
+  padding: 1rem;
+}
+.greeting label {
+  display: block;
+  padding-bottom: 0.1rem;
+  font-family: "Alice", "aliceregular", serif;
+  font-size: 1.5rem;
+  color: rgb(25, 25, 112);
+}
+
+#insertName {
+  display: block;
+  background-color: #dcdcdc;
+  font-size: 1.15rem;
+  font-family: "Alice", "aliceregular", serif;
+  padding: 0.05rem 0.35rem;
+  border-color: #191970;
+  border-style: dotted;
+  border-radius: 0.65rem;
+  caret-color: #4b0082;
+  margin: 0.5rem 0;
+}
+#insertName:focus {
+  background-color: #f5f5f5;
+  outline: none;
+}
+
+#confirmBtn, .cancel {
+  outline: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.1rem 0.4rem;
+  margin-top: 0.5rem;
+  border: 0.01em solid #191970;
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 255, 0.3137254902);
+}
+
+/*# sourceMappingURL=styles.css.map */
