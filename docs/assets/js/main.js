@@ -47,10 +47,10 @@ showDialog.onclick = (e) => {
 	} else {
 		myHeading.textContent = `Успехов, ${localStorage.getItem("name")}!`;
 	  repWord.textContent = "земляне";
+	  helchange.textContent = " ";
+		showDialog.textContent = "представитесь.";
     showDialog.blur();
 		setTimeout(() => {
-		  helchange.textContent = " ";
-			showDialog.textContent = "представитесь.";
 		  myHeading.textContent = "Привет, мир!";
 		}, 2000);
 		localStorage.removeItem("name");
