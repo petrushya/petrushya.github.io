@@ -16,7 +16,7 @@ myInput.onfocus = () => {
 	if(myInput.value && !regexInput.test(myInput.value)) {
 		myInput.focus();
 		myInput.style = errStyle;
-    error.className = "error active";
+    error.className = "error active color";
 	};
   myInput.addEventListener("input", () => {
 		if(!myInput.value){
