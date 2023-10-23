@@ -6,38 +6,46 @@ const showDialog = document.getElementById("showDialog");
 const repWord = document.querySelector(".replace");
 const namedialog = document.querySelector("dialog");
 const cancelbtn = document.querySelector(".cancel");
-const regexInput = /^[A-ZА-Яа-яa-z][-_A-ZА-Яа-яa-z\d]*[A-ZА-Яа-яa-z\d]$/iu;
-const startInputReg = /[^A-ZА-Яа-яa-z]/iu;
-const endInputReg = /[^A-ZА-Яа-яa-z\d]/iu;
-const errorRegex = /[^A-Za-zА-Яа-я-_\d]/iu;
+const regexInput = /^[-\wа-я][-\wа-я]*[-\wа-я\s]$/iu;
+const errorRegex = /[^\wа-я-]/iug;
 const helchange = document.querySelector(".changed");
+const error = myInput.previousElementSibling;
+let errStyle = "box-shadow: 0 0 5px 3px crimson;border-color: crimson;border-style: solid;"
 
 myInput.onfocus = () => {
-  if (myInput.value && !regexInput.test(myInput.value)) {
-    myInput.style.boxShadow = "0 0 5px 3px crimson";
-  } else {
-    myInput.style.boxShadow = "";
-  }
-
-  window.addEventListener("load", () => {
-    if (!regexInput.test(myInput.value)) {
-      myInput.style.boxShadow = "0 0 5px 3px crimson";
-    } else {
-      myInput.style.boxShadow = "";
-    }
-  });
-
+	if(myInput.value && !regexInput.test(myInput.value)) {
+		myInput.focus();
+		myInput.style = errStyle;
+    error.className = "error active";
+	};
   myInput.addEventListener("input", () => {
-    if (!regexInput.test(myInput.value)) {
-      myInput.style.boxShadow = "0 0 5px 3px crimson";
+		if(!myInput.value){
+			myInput.focus();
+			myInput.style = errStyle;
+			error.textContent = "Вы ничего не написали.";
+			error.className = "error active";
+		} else if(myInput.value.length === 1 && !errorRegex.test(myInput.value)){
+	    myInput.style = "";
+	    error.textContent = "Не менее 2-х символов!";
+	    error.className = "error active";
+  	} else if(myInput.value && !regexInput.test(myInput.value)){
+    	error.textContent = "Ой-ой, спецсимволы и пробелы в слове нельзя!";
+      myInput.style = errStyle;
+	    error.className = "error active";
+    } else if(myInput.value && regexInput.test(myInput.value) && !myInput.value.match(/\p{L}/u)) {
+      myInput.style = errStyle;
+      error.className = "error active";
+    	error.textContent = "Ох, без букв не обойтись!";
     } else {
-      myInput.style.boxShadow = "";
+	    myInput.style = "";
+	    error.textContent = "";
+	    error.className = "error";
     }
   });
 };
 
 myInput.onblur = () => {
-  myInput.style.boxShadow = "";
+  myInput.style = "";
 };
 
 showDialog.onclick = (e) => {
@@ -61,9 +69,28 @@ confirmBtn.onclick = (e) => {
   e.preventDefault();
   if(!myInput.value){
   	myInput.focus();
-  	myInput.style.boxShadow = "0 0 5px 3px crimson";
-  }else if (regexInput.test(myInput.value)) {
-    localStorage.setItem("name", myInput.value.replace(myInput.value.slice(0,1),myInput.value.slice(0,1).toUpperCase()));
+  	myInput.style = errStyle;
+  	error.className = "error active";
+  } else if(myInput.value.length === 1 && !errorRegex.test(myInput.value)) {
+    myInput.style = "";
+    error.className = "error active color";
+    myInput.focus();
+ 	} else if (!regexInput.test(myInput.value)) {
+    myInput.setSelectionRange(
+      myInput.value.search(errorRegex),
+      myInput.value.search(errorRegex) + 1
+    );
+    myInput.style = errStyle;
+    error.className = "error active color";
+ 	  error.textContent = "Удалите спецсимволы или пробелы из слова!!!";
+    myInput.focus();
+  } else if(!/\p{L}/u.test(myInput.value)){
+    myInput.style = errStyle;
+    error.className = "error active color";
+   	error.textContent = "В слове должны быть буквы!";
+    myInput.focus();
+  } else if (regexInput.test(myInput.value) && /\p{L}/u.test(myInput.value)) {
+    localStorage.setItem("name", myInput.value.replace(myInput.value.match(/\p{L}/u)[0], myInput.value.match(/\p{L}/u)[0].toUpperCase()).replace(/\s/g, ""));
 		myHeading.textContent = `Привет, ${localStorage.getItem("name")}!`;
 		repWord.textContent = `${localStorage.getItem("name")}`;
 		showDialog.textContent = "попрощаться.";
@@ -72,22 +99,9 @@ confirmBtn.onclick = (e) => {
     namedialog.close();
     showDialog.blur();
   } else {
-    if (myInput.value[0].match(startInputReg)) {
-      myInput.setSelectionRange(0, 1);
-      myInput.focus();
-    } else if(myInput.value[myInput.value.length - 1].match(endInputReg)){
-      myInput.setSelectionRange(
-        myInput.value.length - 1,
-        myInput.value.length
-        );
-      myInput.focus();
-    } else {
-      myInput.setSelectionRange(
-        myInput.value.match(errorRegex).index,
-        myInput.value.match(errorRegex).index + 1
-  	    );
-      myInput.focus();
-    }
+    myInput.style = "";
+    error.textContent = "";
+    error.className = "error";
   }
 };
 

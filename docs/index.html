@@ -44,11 +44,12 @@
 				<h1>Привет, мир!</h1>
 		  	<p>Сохраняем традиции знакомства с <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, но вы можете персонализировать приветствие, если <span class="changed"></span> <button id="showDialog">представитесь.</button></p>			
 		  <dialog class="greeting">
-		   <form>
+		   <form class="inputname">
 		    <label for="insertName">Как Вас называть?</label>
-			  <input type="text" id="insertName" name="input" minlength="2" maxlength="15" size="16" placeholder="От 2 до 15 символов.">
+			  <span class="error" aria-live="polite"></span>
+			  <input type="text" id="insertName" name="input" minlength="2" maxlength="11" size="15" placeholder="От 2 до 10 символов.">
 				<button id="confirmBtn">Применить</button>
-				<button class="cancel">Отменить</button>
+				<button class="cancel">&#9746;</button>
 		   </form>
 		  </dialog> 
 		  </hgroup>
