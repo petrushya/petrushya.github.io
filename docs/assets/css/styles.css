@@ -731,7 +731,7 @@ footer a {
   background-color: rgba(0, 0, 0, 0.85);
 }
 .greeting form {
-  padding: 2.5rem 1rem 1rem 1.5rem;
+  padding: 2.5rem 0.5rem 1rem 0.5rem;
 }
 .greeting label {
   display: block;
@@ -765,7 +765,7 @@ input#insertName:focus {
   font-size: 1.2rem;
   font-weight: bolder;
   padding: 0.1rem 0.4rem;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
   border: 1px solid #000000;
   border-radius: 0.75rem;
   background-color: #ffffff;
@@ -799,7 +799,7 @@ input#insertName:focus {
   display: block;
   position: absolute;
   top: 0.5rem;
-  left: 1rem;
+  left: 1px;
   overflow: visible;
   width: 13.3rem;
   padding: 0;
