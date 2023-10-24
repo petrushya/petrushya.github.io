@@ -421,7 +421,7 @@ th {
   font-size: large;
 }
 
-body {
+.mybackground {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
