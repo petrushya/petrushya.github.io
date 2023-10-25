@@ -22,27 +22,30 @@
 
     <link rel="stylesheet" href="https://petrushya.github.io/assets/css/styles.css">
     <link rel="icon" href="https://petrushya.github.io/assets/images/logo.svg" type="img/svg+xml">
+    
 		<script src="https://petrushya.github.io/assets/js/mmenu.js" defer></script>
 		<script src="https://petrushya.github.io/assets/js/main.js" defer></script>
   </head>
   <body><div class="mybackground">
   	<header>
   		<div class="stitle">
-	  		<a href = "/"><img class="cool" src="https://petrushya.github.io/assets/images/logo.svg" alt="logo" /></a>
+	  		<a href = "/"><img class="cool" src="https://petrushya.github.io/assets/images/logo.svg" alt="logo"/></a>
 	  	</div>
 		  <button class="mobile-menu">&#8801;</button>
 			<nav id="main-nav" aria-label = "Главное меню">
 				<a href="/" class="activePage" aria-current="page">Старт</a>
-				<a href="/blog.html" >Заметки</a>
+				<a href="/blog.html">Заметки</a>
 			</nav>
 
 	  </header>
 	  <main>
-	    		<div id="myhello">
+	    		<section class="firstpage">
+		<div id="myhello">
 			<img class="scarec" src="/assets/images/img-logo.svg" alt="Голова соломенного пугала в шляпе.">
 			<hgroup class="helloW">
 				<h1>Привет, мир!</h1>
 		  	<p>Сохраняем традиции знакомства с <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, но вы можете персонализировать приветствие, если <span class="changed"></span> <button id="showDialog">представитесь.</button></p>			
+		  </hgroup>
 		  <dialog class="greeting">
 		   <form class="inputname">
 		    <label for="insertName">Как Вас называть?</label>
@@ -52,21 +55,19 @@
 				<button class="cancel">&#9746;</button>
 		   </form>
 		  </dialog> 
-		  </hgroup>
 		</div>
-		<div style="clear-both"></div>
-		<section class="firstpage">
 			<p>Добро пожаловать на мою страничку, <span class="replace">земляне</span>! <span class="emoji">&#128526;</span></p><br />
-			<p>На просторах интернета можно найти много обучающих ресурсов по созданию веб&ndash;сайтов, одним из которых является <a target="_blanc" href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer">курс фронт&ndash;енд веб разработчика от <abbr tabindex="0" lang="en" title="Mozilla developer network">MDN</abbr></a>. Конечно, после прохождения данного курса самостоятельно, вы не получите сертификата, но приобретёте современные знания по интерфейсной веб&ndash;разработке. <abbr tabindex="0" lang="en" title="Mozilla developer network">MDN</abbr> так же целесообразно использовать и как справочник по <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, <abbr tabindex="0" lang="en" title="Cascading Style Sheets">CSS</abbr> и <abbr tabindex="0" lang="en" title="JavaScript">JS</abbr>.</p>
-			<p>В процессе изучения вышеназванного курса, практически с первых шагов, объясняются все возможности <a target="_blanc" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">публикации своего творения</a> в интернете. Там же предоставляются инструкции по размещению кода на ресурсе <span lang="en">&ldquo;GitHub Pages&rdquo;</span>, где допускается создание как простой <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr> странички, так и более сложного проекта, или даже нескольких проектов, если не превышать оговоренных требований. Предлагаются различные способы переноса кода в созданный репозиторий на <span lang="en">&ldquo;GitHub Pages&rdquo;</span>. Можно просто копировать и редактировать код непосредственно на сайте, но со временем, если проснётся интерес, потре&shy;буется <a target="_blanc" href="https://git-scm.com/book/ru/v2">изучить <span lang="en"><strong>&ldquo;Git&rdquo;</strong></span></a>, для упрощения работы с репози&shy;торием.</p>
-			<p>При выборе <a target="_blanc" href="https://pages.github.com/">площадки для сайта на <span lang="en"><strong>&ldquo;GitHub Pages&rdquo;</strong></span></a>, предлагается ряд полезных опций: <a target="_blanc" href="https://jekyllrb.com/">ведение блога с <span lang="en"><strong>&ldquo;Jekyll&rdquo;</strong></span></a>, использование собственного домена для сайта, путеводители по документации <span lang="en">GitHub Pages</span>. Для более полной функциональности &ldquo;<span lang="en">Jekyll</span> блога&rdquo; предполагается регистрация на внешнем Веб&ndash;ресурсе, таком как <span lang="en">&ldquo;Disqus&rdquo;</span>, <a target="_blank" href="https://jreel.github.io/setting-up-disqus-comments-on-jekyll/">с последующим подключением</a>, или установка на <span lang="en">&ldquo;GitHub Pages&rdquo;</span> <a target="_blank" href="https://staticman.net/">робота из <span lang="en">&ldquo;Staticman&rdquo;</span></a>, но есть у этого блога и преимущества. <span lang="en">&ldquo;Jekyll&rdquo;</span> предоставляет множество готовых бесплатных тем для оформления, публикациям не требуется модерация, идеально подходит для ведения дневника обучения и прочего. При желании, после <a target="_blanc" href="https://jekyllrb.com/docs/">изучения <span lang="en">&ldquo;Jekyll&rdquo;</span></a>, можно сконструировать полноценный сайт, соответствующий вашим запросам, больше примеров представлено в документации <span lang="en">&ldquo;Jekyll&rdquo;</span>.</p><br />
+			<p>На просторах интернета можно найти много обучающих ресурсов по созданию веб&ndash;сайтов, одним из которых является <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer">курс фронт&ndash;енд веб разработчика от <span lang="en">MDN</span></a>. Конечно, после прохождения данного курса самостоятельно, вы не получите сертификата, но приобретёте современные знания по интерфейсной веб&ndash;разработке. <abbr tabindex="0" lang="en" title="Mozilla developer network">MDN</abbr> так же целесообразно использовать и как справочник по <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, <abbr tabindex="0" lang="en" title="Cascading Style Sheets">CSS</abbr> и <abbr tabindex="0" lang="en" title="JavaScript">JS</abbr>.</p>
+			<p>В процессе изучения вышеназванного курса, практически с первых шагов, объясняются все возможности <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">публикации своего творения</a> в интернете. Там же предоставляются инструкции по размещению кода на ресурсе <span lang="en">&ldquo;GitHub Pages&rdquo;</span>, где допускается создание как простой <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr> странички, так и более сложного проекта, или даже нескольких проектов, если не превышать оговоренных требований. Предлагаются различные способы переноса кода в созданный репозиторий на <span lang="en">&ldquo;GitHub Pages&rdquo;</span>. Можно просто копировать и редактировать код непосредственно на сайте, но со временем, если проснётся интерес, потре&shy;буется <a target="_blank" href="https://git-scm.com/book/ru/v2">изучить <span lang="en"><strong>&ldquo;Git&rdquo;</strong></span></a>, для упрощения работы с репози&shy;торием.</p>
+			<p>При выборе <a target="_blank" href="https://pages.github.com/">площадки для сайта на <span lang="en"><strong>&ldquo;GitHub Pages&rdquo;</strong></span></a>, предлагается ряд полезных опций: <a target="_blank" href="https://jekyllrb.com/">ведение блога с <span lang="en"><strong>&ldquo;Jekyll&rdquo;</strong></span></a>, использование собственного домена для сайта, путеводители по документации <span lang="en">GitHub Pages</span>. Для более полной функциональности &ldquo;<span lang="en">Jekyll</span> блога&rdquo; предполагается регистрация на внешнем Веб&ndash;ресурсе, таком как <span lang="en">&ldquo;Disqus&rdquo;</span>, <a target="_blank" href="https://jreel.github.io/setting-up-disqus-comments-on-jekyll/">с последующим подключением</a>, или установка на <span lang="en">&ldquo;GitHub Pages&rdquo;</span> <a target="_blank" href="https://staticman.net/">робота из <span lang="en">&ldquo;Staticman&rdquo;</span></a>, но есть у этого блога и преимущества. <span lang="en">&ldquo;Jekyll&rdquo;</span> предоставляет множество готовых бесплатных тем для оформления, публикациям не требуется модерация, идеально подходит для ведения дневника обучения и прочего. При желании, после <a target="_blank" href="https://jekyllrb.com/docs/">изучения <span lang="en">&ldquo;Jekyll&rdquo;</span></a>, можно сконструировать полноценный сайт, соответствующий вашим запросам, больше примеров представлено в документации <span lang="en">&ldquo;Jekyll&rdquo;</span>.</p><br />
 			<p>Успехов Вам в ваших творческих началах!!!</p>
 		</section>
     </main>
     
     <footer>
-    	<div class="my-brand"><p lang="en" translate="no"><span class="simbol">&copy;</span> P&ndash;himself</p></div>
-<div class="social"><a target="_blanc" href="https://github.com/petrushya"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span lang="en" translate="no" class="username">petrushya</span></a></div>
+    	<div class="my-brand"><p lang="en" translate="no"><span class="simbol" style="font-size:0.9rem;">&copy;</span> P&ndash;himself</p></div>
+<div><p><a href="http://jigsaw.w3.org/css-validator/check/referer"><img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Правильный CSS!" /></a></p></div>
+<div class="social"><a target="_blank" href="https://github.com/petrushya"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span lang="en" translate="no" class="username">petrushya</span></a></div>
     </footer>
   </div></body>
 </html>
