@@ -24,6 +24,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "noto_monoregular";
+  src: url("notomono-regular-webfont.woff2") format("woff2"), url("notomono-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   padding: 0;
   margin: 0;
@@ -31,14 +37,14 @@
 
 html {
   background-color: rgb(254, 254, 254);
-  font-family: "Noto Sans", "noto_sansregular", sans-serif;
+  font-family: "noto_sansregular", "Noto Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
   color: rgb(25, 25, 112);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Alice", "aliceregular", serif;
+  font-family: "aliceregular", "Alice", serif;
   line-height: 3rem;
 }
 
@@ -99,7 +105,7 @@ abbr {
   cursor: pointer;
 }
 abbr:focus::before {
-  font-family: "Noto Sans", "noto_sansregular", sans-serif;
+  font-family: "noto_sansregular", "Noto Sans", sans-serif;
   font-size: 1rem;
   display: inline-block;
   position: absolute;
@@ -123,8 +129,12 @@ abbr:focus::before {
   line-height: 0.9rem;
 }
 
+q {
+  font-style: italic;
+}
+
 code {
-  font-family: "Noto Sans Mono", "Courier New", "Lucida Console", monospace;
+  font-family: "noto_monoregular", "Noto Sans Mono", "Courier New", "Lucida Console", monospace;
   font-size: 0.95rem;
   line-height: 1rem;
   padding: 0 0.25rem;
@@ -219,7 +229,7 @@ section {
   margin-bottom: 0.25rem;
 }
 #main-nav a {
-  font-family: "Alice", "aliceregular", serif;
+  font-family: "aliceregular", "Alice", serif;
   font-size: 1.375rem;
   text-decoration: none;
   margin: 0 0.05rem;
@@ -264,13 +274,13 @@ main {
 }
 
 section > h1:first-child, hgroup h1 {
-  margin: 0.875rem auto;
+  margin: 0.9rem auto;
   text-align: center;
   text-shadow: 0 0 1.5rem rgba(25, 25, 112, 0.75);
 }
 
 .postpage > h2:first-child {
-  margin: 1.5rem 0 0 0;
+  margin: 1.6rem 0 0 0;
   padding-left: 2rem;
   line-height: 1;
 }
@@ -286,7 +296,7 @@ section > h1:first-child, hgroup h1 {
   margin-bottom: 3rem;
 }
 #myhello p {
-  font-family: "Noto Sans", "noto_sansregular", sans-serif;
+  font-family: "noto_sansregular", "Noto Sans", sans-serif;
   font-size: 1rem;
 }
 #myhello p::first-letter {
@@ -314,7 +324,7 @@ aside {
 }
 aside nav {
   background-color: rgba(255, 255, 0, 0.1450980392);
-  margin-top: 0.72rem;
+  margin-top: 0.75rem;
   padding: 0.75rem 0;
   border: none;
 }
@@ -325,7 +335,7 @@ aside nav a {
   text-align: center;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-family: "Alice", "aliceregular", serif;
+  font-family: "aliceregular", "Alice", serif;
   font-size: 1.15rem;
   padding: 0.25rem 0.25rem 0.5rem 1.1rem;
   margin-bottom: 0.75rem;
@@ -345,7 +355,7 @@ aside .activeUrl {
 }
 
 .firstpage {
-  font-family: "Marck Script", "marck_scriptregular", cursive;
+  font-family: "marck_scriptregular", "Marck Script", cursive;
 }
 .firstpage p::first-letter {
   font-weight: bolder;
@@ -376,11 +386,11 @@ footer a {
 }
 .my-brand p {
   line-height: 1.625rem;
-  font-family: "Marck Script", "marck_scriptregular", cursive;
+  font-family: "marck_scriptregular", "Marck Script", cursive;
 }
 
 .social {
-  font-family: "Marck Script", "marck_scriptregular", cursive;
+  font-family: "marck_scriptregular", "Marck Script", cursive;
 }
 
 .svg-icon {
@@ -500,7 +510,7 @@ footer a {
 .greeting label {
   display: block;
   padding-bottom: 0.1rem;
-  font-family: "Alice", "aliceregular", serif;
+  font-family: "aliceregular", "Alice", serif;
   font-size: 1.5rem;
   color: rgb(25, 25, 112);
 }
@@ -508,7 +518,7 @@ footer a {
 input#insertName {
   background-color: #dcdcdc;
   font-size: 1.15rem;
-  font-family: "Alice", "aliceregular", serif;
+  font-family: "aliceregular", "Alice", serif;
   padding: 0.05rem 0.35rem;
   border-color: #191970;
   border-style: dotted;
@@ -567,7 +577,7 @@ input#insertName:focus {
   overflow: visible;
   width: 13.3rem;
   padding: 0;
-  font-family: "Noto Sans", "noto_sansregular", sans-serif;
+  font-family: "noto_sansregular", "Noto Sans", sans-serif;
   font-size: 95%;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.75);
