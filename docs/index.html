@@ -47,12 +47,12 @@
 		  	<p>Сохраняем традиции знакомства с <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, но вы можете персонализировать приветствие, если <span class="changed"></span> <button id="showDialog">представитесь.</button></p>			
 		  </hgroup>
 		  <dialog class="greeting">
-		   <form class="inputname">
+		   <form id="inputName">
 		    <label for="insertName">Как Вас называть?</label>
 			  <span class="error" aria-live="polite"></span>
 			  <input type="text" id="insertName" name="input" minlength="2" maxlength="11" size="15" placeholder="От 2 до 10 символов.">
 				<button id="confirmBtn">Применить</button>
-				<button class="cancel">&#9746;</button>
+				<button type="button" class="cancel">&#9746;</button>
 		   </form>
 		  </dialog> 
 		</div>
