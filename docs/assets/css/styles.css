@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Alice&family=Marck+Script&family=Noto+Color+Emoji&family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Marck+Script&family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
 @font-face {
   font-family: "aliceregular";
   src: url("../fonts/alice-regular-webfont.woff2") format("woff2"), url("../fonts/alice-regular-webfont.woff") format("woff"), url("../fonts/alice-regular-webfont.ttf") format("truetype"), url("../fonts/alice-regular-webfont.svg#aliceregular") format("svg");
@@ -19,14 +19,8 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "NotoColorEmoji";
-  src: url("../fonts/NotoColorEmoji-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
   font-family: "noto_monoregular";
-  src: url("../fonts/notomono-regular-webfont.woff2") format("woff2"), url("../fonts/notomono-regular-webfont.woff") format("woff");
+  src: url("../fonts/notomono-regular-webfont.woff2") format("woff2"), url("../fonts/notomono-regular-webfont.woff") format("woff"), url("../fonts/NotoSansMono-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -106,27 +100,27 @@ abbr {
 }
 abbr:focus::before {
   font-family: "noto_sansregular", "Noto Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   display: inline-block;
   position: absolute;
   visibility: visible;
-  max-width: 7.8em;
+  max-width: 8.25rem;
   border: 1px dotted #000000;
   content: attr(title);
-  line-height: 1em;
+  line-height: 1.15;
   padding: 0.2em;
   background-color: #f5f5f5;
   color: #000000;
 }
 
-.simbol {
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+.symbol {
+  font-family: emoji;
 }
 
 .emoji {
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  font-family: emoji;
   font-size: 1.25rem;
-  line-height: 0.9rem;
+  line-height: 0.5;
 }
 
 q {
@@ -186,8 +180,8 @@ th {
 
 .mybackground {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  flex-flow: column nowrap;
+  min-height: 100vh;
   max-width: 50rem;
   margin: 0 auto;
   background: url("../images/redline.svg") 86.5% top/2px repeat-y, url("../images/rightboder.svg") 100% top/1px repeat-y, linear-gradient(to left, rgba(245, 245, 245, 0.6), rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 96%, #f5f5f5), url("../images/kletka.svg") left top/8rem 24rem repeat, #fefefe;
@@ -197,17 +191,16 @@ th {
 }
 
 header {
-  width: 100%;
   height: calc(4.5rem - 1px);
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background: url("../images/topchik.svg") center top/100% 100% no-repeat, url("../images/petropavlovkazima.avif") center top/100% 100% no-repeat, #fefefe;
+  background: url("../images/topchik.svg") center top/100% 100% no-repeat, url("../images/petropavlovkazima.png") center top/100% 100% no-repeat, #fefefe;
   padding: 0 1.5rem;
 }
 
 section {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .stitle {
@@ -237,9 +230,10 @@ section {
 #main-nav a {
   font-family: "aliceregular", "Alice", serif;
   font-size: 1.375rem;
+  line-height: 1.1818;
   text-decoration: none;
   margin: 0 0.05rem;
-  padding: 0.1rem 0.75rem 0.25rem;
+  padding: 0.125rem 0.75rem 0.25rem;
   border: 2px solid rgba(25, 25, 112, 0.25);
   border-radius: 1rem;
   background-color: rgba(255, 255, 255, 0.3333333333);
@@ -256,9 +250,11 @@ section {
 }
 #main-nav .activePage::before {
   display: inline-block;
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  position: relative;
+  top: 0.0625rem;
   content: "🌟";
   font-size: 1.15rem;
+  line-height: 1;
   margin-right: 0.25rem;
 }
 #main-nav .subPage {
@@ -274,10 +270,17 @@ section {
   display: none;
 }
 
+.all-content {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
 main {
-  width: 82%;
-  min-height: 80vh;
-  margin-left: 4%;
+  width: 83.5%;
+  margin-left: 2.5%;
+  margin-right: 0.5%;
 }
 
 section > h1:first-child, hgroup h1 {
@@ -322,21 +325,23 @@ hgroup h1 {
   flex: 3;
 }
 #myhello .helloW h1::before {
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
+  position: relative;
+  bottom: 0.125rem;
   content: "👋";
+  font-family: emoji;
   font-size: 1.5rem;
   line-height: 0.8;
   margin-right: 0.3rem;
 }
 
 aside {
-  width: 13.4%;
+  width: 13.5%;
   box-sizing: border-box;
 }
-aside #aside-nav {
+aside #subpage-nav {
+  display: block;
   background-color: rgba(255, 255, 0, 0.1450980392);
-  margin-top: 0.9rem;
-  padding: 0.75rem 0;
+  padding: 0.125rem 0;
   border: none;
 }
 aside nav a {
@@ -366,7 +371,7 @@ aside .activeUrl {
 }
 
 .firstpage {
-  font-family: "marck_scriptregular", "Marck Script", cursive;
+  font-family: "marck_scriptregular", "Marck Script", "Brush Script MT", cursive;
 }
 .firstpage p::first-letter {
   font-weight: bolder;
@@ -377,13 +382,14 @@ aside .activeUrl {
 }
 
 footer {
-  width: 100%;
+  height: 5rem;
+  align-items: center;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 1.15rem;
   background: url("../images/dungeon.svg") center bottom/100% 100% no-repeat, #fefefe;
-  padding: 1.5rem 3rem;
+  padding: 0 1.5rem;
   margin-top: 0.5rem;
 }
 footer a {
@@ -397,11 +403,16 @@ footer a {
 }
 .my-brand p {
   line-height: 1.625rem;
-  font-family: "marck_scriptregular", "Marck Script", cursive;
+  font-family: "marck_scriptregular", "Marck Script", "Brush Script MT", cursive;
+}
+.my-brand p span {
+  font-family: emoji;
+  font-weight: bolder;
+  color: #828282;
 }
 
 .social {
-  font-family: "marck_scriptregular", "Marck Script", cursive;
+  font-family: "marck_scriptregular", "Marck Script", "Brush Script MT", cursive;
 }
 
 .svg-icon {
@@ -409,8 +420,8 @@ footer a {
   height: 16px;
   display: inline-block;
   fill: #828282;
-  padding-right: 0.35rem;
-  vertical-align: middle;
+  position: relative;
+  top: 0.25rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -418,21 +429,26 @@ footer a {
     height: 4.5rem;
     margin-right: 0.5rem;
   }
+  main {
+    flex: 1;
+    margin-right: 1.5%;
+  }
   aside {
     display: none;
   }
   .mobile-menu {
     display: block;
     cursor: pointer;
-    font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
-    font-size: 2rem;
-    font-weight: bold;
-    line-height: 1.75rem;
-    background-color: rgba(255, 255, 255, 0.4588235294);
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: auto 0 0.25rem;
+    text-align: center;
     border: 3px solid rgba(25, 25, 112, 0.25);
-    border-radius: 0.35rem;
-    margin: 1rem 0;
-    padding: 0 0.5rem;
+    background: rgba(0, 0, 255, 0.1);
+    border-radius: 0.5rem;
+    font-family: fontEmoji;
+    font-size: 2rem;
+    line-height: 1;
     color: rgb(25, 25, 112);
   }
   #main-nav {
@@ -455,6 +471,7 @@ footer a {
     height: 2.5rem;
     line-height: 2.4rem;
     padding-left: 7.5%;
+    margin: 0;
     border: unset;
     border-radius: unset;
     border-top: 1px solid rgba(25, 25, 112, 0.25);
@@ -491,17 +508,17 @@ footer a {
   color: rgb(25, 25, 112);
 }
 #showDialog::before {
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
   content: "👉";
+  font-family: emoji;
   font-size: 1.1rem;
-  line-height: 0.9;
+  line-height: 0.75;
   margin-right: 0.2rem;
 }
 #showDialog::after {
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
   content: "👈";
+  font-family: emoji;
   font-size: 1.1rem;
-  line-height: 0.9;
+  line-height: 0.75;
   margin-left: 0.2rem;
 }
 
@@ -509,6 +526,7 @@ footer a {
   margin: auto auto;
   border: 0.35rem double #4b0082;
   border-radius: 1rem;
+  background-color: #ffffff;
 }
 .greeting::backdrop {
   background-color: rgba(0, 0, 0, 0.85);
@@ -564,16 +582,16 @@ footer a {
   outline: none;
   cursor: pointer;
   position: absolute;
-  top: 0.35rem;
-  right: 0;
-  font-family: "Noto Color Emoji", "NotoColorEmoji", sans-serif;
-  font-size: 2.5rem;
-  line-height: 1.75rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 2rem;
+  line-height: 0.65;
   background: none;
   border: none;
+  color: rgb(25, 25, 112);
 }
 .cancel:hover, .cancel:focus {
-  color: rgb(180, 0, 0);
+  color: red;
 }
 
 .error {
