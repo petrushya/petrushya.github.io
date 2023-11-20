@@ -439,17 +439,16 @@ footer a {
   .mobile-menu {
     display: block;
     cursor: pointer;
-    width: 2.5rem;
-    height: 2.5rem;
     margin: auto 0 0.25rem;
-    text-align: center;
     border: 3px solid rgba(25, 25, 112, 0.25);
     background: rgba(0, 0, 255, 0.1);
     border-radius: 0.5rem;
-    font-family: fontEmoji;
     font-size: 2rem;
     line-height: 1;
     color: rgb(25, 25, 112);
+  }
+  .mobile-menu span {
+    margin: 0 0.5rem;
   }
   #main-nav {
     flex-flow: column nowrap;
@@ -582,21 +581,22 @@ footer a {
   display: block;
   cursor: pointer;
   position: absolute;
-  width: 2rem;
-  height: 2rem;
+  width: 1.75rem;
   top: 0.125rem;
   right: 0.125rem;
   background: none;
-  border: 3px solid rgba(255, 0, 0, 0);
+  border: 3px solid rgba(25, 25, 112, 0.25);
   border-radius: 0.5rem;
+  text-align: center;
+  color: rgb(25, 25, 112);
 }
 .cancel:hover, .cancel:focus {
   border: 3px solid red;
+  color: red;
 }
 .cancel span {
-  font-family: emoji;
-  font-size: 1rem;
-  line-height: 0.75;
+  font-size: 1.5rem;
+  line-height: 1;
 }
 
 .error {
