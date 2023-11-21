@@ -195,7 +195,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  background: url("../images/topchik.svg") center top/100% 100% no-repeat, url("../images/petropavlovkazima.png") center top/100% 100% no-repeat, #fefefe;
+  background: url("../images/topchik.svg") center top/100% 100% no-repeat, url("../images/012345.png") center top/100% 100% no-repeat, #fefefe;
   padding: 0 1.5rem;
 }
 

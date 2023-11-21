@@ -70,6 +70,7 @@ confirmBtn.onclick = (e) => {
   if(!myInput.value){
   	myInput.focus();
   	myInput.style = errStyle;
+		error.textContent = "Вы ничего не написали.";
   	error.className = "error active";
   } else if(myInput.value.length === 1 && !errorRegex.test(myInput.value)) {
     myInput.style = "";
@@ -108,6 +109,10 @@ confirmBtn.onclick = (e) => {
 cancelbtn.onclick = (e) => {
 	e.preventDefault();
 	myInput.value = "";
+  myInput.style = "";
+  error.className = "";
+  error.textContent = "";
+	showDialog.blur();
 	namedialog.close();
 }
 
