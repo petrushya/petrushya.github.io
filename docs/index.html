@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-		    <!-- Begin Jekyll SEO tag v2.8.0 -->
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Старт | Strawhead</title>
-<meta name="generator" content="Jekyll v4.3.2" />
+<meta name="generator" content="Jekyll v4.3.3" />
 <meta property="og:title" content="Старт" />
 <meta property="og:locale" content="ru_RU" />
 <meta name="description" content="Продолжаем изучать программирование веб-сайтов и знакомиться с практическими аспектами веб-разработки, используя уроки и рекомендации курса обучения на MDN Web Docs и Jekyll." />
@@ -19,58 +19,55 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","description":"Продолжаем изучать программирование веб-сайтов и знакомиться с практическими аспектами веб-разработки, используя уроки и рекомендации курса обучения на MDN Web Docs и Jekyll.","headline":"Старт","name":"Strawhead","url":"https://petrushya.github.io/"}</script>
 <!-- End Jekyll SEO tag -->
-
-    <link rel="stylesheet" href="https://petrushya.github.io/assets/css/styles.css">
-    <link rel="icon" href="https://petrushya.github.io/assets/images/logo.svg" type="img/svg+xml">
-    
-		<script src="https://petrushya.github.io/assets/js/mmenu.js" defer></script>
-		<script src="https://petrushya.github.io/assets/js/main.js" defer></script>
-  </head>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="/assets/images/logo.svg" type="img/svg+xml">
+    <script src="/assets/js/namedialog.js" defer></script>
+	</head>
   <body><div class="mybackground">
+  	<a class="sr-only" href="#main-content">Перейти к основному содержанию</a>
   	<header>
   		<div class="stitle">
-	  		<a href = "/"><img class="cool" src="https://petrushya.github.io/assets/images/logo.svg" alt="logo"/></a>
-	  	</div>
-		  <button class="mobile-menu"><span class="symbol">&#x2261;</span></button>
+	  		<a href = "/"><img class="cool" src="/assets/images/logo.svg" alt="logo"></a>
+	  	</div><button class="mobile-menu" aria-labelledby="main-nav"><span class="symbol">&#x2261;</span></button>
 			<nav id="main-nav" aria-label = "Главное меню">
-				<a href="/" class="activePage">Старт</a>
-				<a href="/blog.html" >Заметки</a>
+				<ol class="main-cat">
+					<li class="menu-item"><a href="/" aria-current="page" class="activePage">Старт</a></li>
+					<li class="menu-item"><a href="/blog.html" >Заметки</a></li>
+				</ol>
 			</nav>
-
-	  </header>
+		</header>
 	  <div class="all-content">
-			<main>
-			  		<section class="firstpage">
-		<div id="myhello">
-			<img class="scarec" src="/assets/images/img-logo.svg" alt="Голова соломенного пугала в шляпе.">
-			<hgroup class="helloW">
-				<h1>Привет, мир!</h1>
-		  	<p>Сохраняем традиции знакомства с <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, но вы можете персонализировать приветствие, если <span class="changed"></span> <button id="showDialog">представитесь.</button></p>			
-		  </hgroup>
-		  <dialog class="greeting">
-		   <form id="inputName">
-		    <label for="insertName">Как Вас называть?</label>
-			  <span class="error" aria-live="polite"></span>
-			  <input type="text" id="insertName" name="input" minlength="2" maxlength="11" size="15" placeholder="От 2 до 10 символов.">
-				<button id="confirmBtn">Применить</button>
-				<button type="button" class="cancel"><span class="symbol">&#x2715;</span></button>
-		   </form>
-		  </dialog> 
-		</div>
-			<p>Добро пожаловать на мою страничку, <span class="replace">земляне</span>! <span class="emoji">&#128526;</span></p><br />
-			<p>На просторах интернета можно найти много обучающих ресурсов по созданию веб&ndash;сайтов, одним из которых является <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer">курс фронт&ndash;енд веб разработчика от <span lang="en">MDN</span></a>. Конечно, после прохождения данного курса самостоятельно, вы не получите сертификата, но приобретёте современные знания по интерфейсной веб&ndash;разработке. <abbr tabindex="0" lang="en" title="Mozilla developer network">MDN</abbr> так же целесообразно использовать и как справочник по <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr>, <abbr tabindex="0" lang="en" title="Cascading Style Sheets">CSS</abbr> и <abbr tabindex="0" lang="en" title="JavaScript">JS</abbr>.</p>
-			<p>В процессе изучения вышеназванного курса, практически с первых шагов, объясняются все возможности <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">публикации своего творения</a> в интернете. Там же предоставляются инструкции по размещению кода на ресурсе <span lang="en">&ldquo;GitHub Pages&rdquo;</span>, где допускается создание как простой <abbr tabindex="0" lang="en" title="Hypertext Markup Language">HTML</abbr> странички, так и более сложного проекта, или даже нескольких проектов, если не превышать оговоренных требований. Предлагаются различные способы переноса кода в созданный репозиторий на <span lang="en">&ldquo;GitHub Pages&rdquo;</span>. Можно просто копировать и редактировать код непосредственно на сайте, но со временем, если проснётся интерес, потре&shy;буется <a target="_blank" href="https://git-scm.com/book/ru/v2">изучить <span lang="en"><strong>&ldquo;Git&rdquo;</strong></span></a>, для упрощения работы с репози&shy;торием.</p>
-			<p>При выборе <a target="_blank" href="https://pages.github.com/">площадки для сайта на <span lang="en"><strong>&ldquo;GitHub Pages&rdquo;</strong></span></a>, предлагается ряд полезных опций: <a target="_blank" href="https://jekyllrb.com/">ведение блога с <span lang="en"><strong>&ldquo;Jekyll&rdquo;</strong></span></a>, использование собственного домена для сайта, путеводители по документации <span lang="en">GitHub Pages</span>. Для более полной функциональности &ldquo;<span lang="en">Jekyll</span> блога&rdquo; предполагается регистрация на внешнем Веб&ndash;ресурсе, таком как <span lang="en">&ldquo;Disqus&rdquo;</span>, <a target="_blank" href="https://jreel.github.io/setting-up-disqus-comments-on-jekyll/">с последующим подключением</a>, или установка на <span lang="en">&ldquo;GitHub Pages&rdquo;</span> <a target="_blank" href="https://staticman.net/">робота из <span lang="en">&ldquo;Staticman&rdquo;</span></a>, но есть у этого блога и преимущества. <span lang="en">&ldquo;Jekyll&rdquo;</span> предоставляет множество готовых бесплатных тем для оформления, публикациям не требуется модерация, идеально подходит для ведения дневника обучения и прочего. При желании, после <a target="_blank" href="https://jekyllrb.com/docs/">изучения <span lang="en">&ldquo;Jekyll&rdquo;</span></a>, можно сконструировать полноценный сайт, соответствующий вашим запросам, больше примеров представлено в документации <span lang="en">&ldquo;Jekyll&rdquo;</span>.</p><br />
+			<main id="main-content">
+			  		<div class="firstpage">
+			<div id="myhello">
+				<img class="scarec" src="./assets/images/img-logo.svg" alt="Голова соломенного пугала в шляпе.">
+				<hgroup class="helloW" aria-live="assertive">
+					<h1>Привет, мир!</h1>
+					<p><span class="changed">Сохраняем традиции знакомства с <abbr lang="en">HTML</abbr>, но вы можете персонализировать приветствие, если</span><br><span class="emoji">&#x1f449;</span> <button type="button" id="showDialog">представитесь</button>.<span class="emoji">&#x1f448;</span></p>			
+				</hgroup>
+				<dialog id="greeting" aria-label="Представиться" aria-describedby="insertName">
+				 <form id="inputName" method="dialog">
+				  <label for="insertName">Как Вас называть?</label>
+					<span class="error" aria-live="assertive"></span>
+					<input type="text" id="insertName" name="input" minlength="2" maxlength="11" size="15" placeholder="От 2 до 10 символов." autofocus>
+					<button type="submit" id="confirmBtn">Применить</button>
+					<button type="button" class="cancel" aria-label="закрыть"><span class="symbol">&#x2715;</span></button>
+				 </form>
+				</dialog> 
+			</div>
+			<p aria-live="polite">Добро пожаловать на мою страничку, <span class="replace">земляне</span>! <span class="emoji">&#128526;</span></p><br />
+			<p>На просторах интернета можно найти много обучающих ресурсов по созданию веб-сайтов, одним из которых является <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer">курс фронт-енд веб разработчика от <abbr lang="en">MDN</abbr></a>. Конечно, после прохождения данного курса самостоятельно, вы не получите сертификата, но приобретёте современные знания по интерфейсной веб-разработке. <span lang="en"><abbr>MDN</abbr> (Mozilla developer network)</span> так же целесообразно использовать и как справочник по <span lang="en"><abbr>HTML</abbr> (Hypertext Markup Language)</span>, <span lang="en"><abbr>CSS</abbr> (Cascading Style Sheets)</span> и <span lang="en"><abbr>JS</abbr> (JavaScript)</span>.</p>
+			<p>В процессе изучения вышеназванного курса, практически с первых шагов, объясняются все возможности <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/Publishing_your_website">публикации своего творения</a> в интернете. Там же предоставляются инструкции по размещению кода на ресурсе <span lang="en">GitHub Pages</span>, где допускается создание как простой <abbr lang="en">HTML</abbr> странички, так и более сложного проекта, или даже нескольких проектов, если не превышать оговоренных требований. Предлагаются различные способы переноса кода в созданный репозиторий на <span lang="en">GitHub Pages</span>. Можно просто копировать и редактировать код непосредственно на сайте, но со временем, если проснётся интерес, потре&shy;буется <a target="_blank" href="https://git-scm.com/book/ru/v2">изучить <span lang="en"><strong>Git</strong></span></a>, для упрощения работы с репози&shy;торием.</p>
+			<p>При выборе <a target="_blank" href="https://pages.github.com/">площадки для сайта на <span lang="en"><strong>GitHub Pages</strong></span></a>, предлагается ряд полезных опций: <a target="_blank" href="https://jekyllrb.com/">ведение блога с <span lang="en"><strong>Jekyll</strong></span></a>, использование собственного домена для сайта, путеводители по документации <span lang="en">GitHub Pages</span>. Для более полной функциональности <span lang="en">Jekyll</span> блога предполагается регистрация на внешнем Веб-ресурсе, таком как <span lang="en">Disqus</span>, <a target="_blank" href="https://jreel.github.io/setting-up-disqus-comments-on-jekyll/">с последующим подключением</a>, или установка на <span lang="en">GitHub Pages</span> <a target="_blank" href="https://staticman.net/">робота из <span lang="en">Staticman</span></a>, но есть у этого блога и преимущества. <span lang="en">Jekyll</span> предоставляет множество готовых бесплатных тем для оформления, публикациям не требуется модерация, идеально подходит для ведения дневника обучения и прочего. При желании, после <a target="_blank" href="https://jekyllrb.com/docs/">изучения <span lang="en">Jekyll</span></a>, можно сконструировать полноценный сайт, соответствующий вашим запросам, больше примеров представлено в документации <span lang="en">Jekyll</span>.</p><br />
 			<p>Успехов Вам в ваших творческих началах!!!</p>
-		</section>
+		</div>
 		  </main>
 		  <aside>
 		  </aside>
     </div>
     <footer>
-    	<div class="my-brand"><p lang="en" translate="no"><span>&copy;</span> P&ndash;himself</p></div>
-<div><p><a target="_blank" href="https://jigsaw.w3.org/css-validator/validator.html.en"><img style="border:0;width:4.26rem;height:1.5rem" src="/assets/images/vcss-blue.gif" alt="Правильный CSS!" /></a></p></div>
-<div class="social"><a target="_blank" href="https://github.com/petrushya"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span lang="en" translate="no" class="username">petrushya</span></a></div>
+    	<div class="css-val"><a href="https://jigsaw.w3.org/css-validator/validator.html.en"><img src="/assets/images/vcss-blue.gif" alt="Правильный CSS!"></a></div>
+<div lang="en" class="social"><a href="https://github.com/petrushya" aria-label="github"><svg aria-hidden="true" class="svg-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 16 16"><use xlink:href="/assets/minima-social-icons.svg#github" /></svg></a></div>
     </footer>
   </div></body>
 </html>
