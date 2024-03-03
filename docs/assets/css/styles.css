@@ -2,31 +2,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Alice&family=Marck+Script&family=Noto+Sans&family=Noto+Sans+Mono&display=swap");
 @font-face {
   font-family: "aliceregular";
-  src: url("../fonts/alice-regular-webfont.woff2") format("woff2"), url("../fonts/alice-regular-webfont.woff") format("woff"), url("../fonts/alice-regular-webfont.ttf") format("truetype"), url("../fonts/alice-regular-webfont.svg#aliceregular") format("svg");
+  src: url("../fonts/alice-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "marck_scriptregular";
-  src: url("../fonts/marckscript-regular-webfont.woff2") format("woff2"), url("../fonts/marckscript-regular-webfont.woff") format("woff"), url("../fonts/marckscript-regular-webfont.ttf") format("truetype"), url("../fonts/marckscript-regular-webfont.svg#marck_scriptregular") format("svg");
+  src: url("../fonts/marckscript-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "noto_sansregular";
-  src: url("../fonts/notosans-regular-webfont.woff2") format("woff2"), url("../fonts/notosans-regular-webfont.woff") format("woff"), url("../fonts/notosans-regular-webfont.ttf") format("truetype"), url("../fonts/notosans-regular-webfont.svg#noto_sansregular") format("svg");
+  src: url("../fonts/notosans-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "noto_monoregular";
-  src: url("../fonts/notomono-regular-webfont.woff2") format("woff2"), url("../fonts/notomono-regular-webfont.woff") format("woff"), url("../fonts/NotoSansMono-Regular.ttf") format("truetype");
+  src: url("../fonts/notomono-regular-webfont.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -39,31 +40,48 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "aliceregular", "Alice", serif;
-  line-height: 3rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 2rlh;
+}
+
+h5, h6 {
+  line-height: 1rlh;
 }
 
 h1 {
   font-size: 2.5rem;
+  padding: 1.8rem 0 1.2rem;
 }
 
 h2 {
   font-size: 2rem;
+  padding: 0.4rem 0 1.1rem;
 }
 
 h3 {
   font-size: 1.75rem;
+  padding: 0.55rem 0 0.95rem;
 }
 
 h4 {
   font-size: 1.5rem;
+  padding: 0.6rem 0 0.9rem;
 }
 
 h5 {
   font-size: 1.25rem;
+  padding: 1.4rem 0 0.1rem;
 }
 
 h6 {
   font-size: 1.15rem;
+  padding: 1.45rem 0 0.05rem;
+}
+
+img {
+  max-inline-size: 100%;
 }
 
 p {
@@ -72,14 +90,11 @@ p {
 
 a, a:visited {
   color: mediumblue;
+  caret-color: transparent;
 }
 
-ol, ul {
-  margin-left: 5%;
-  border: none;
-}
-ol li ol, ol li ul, ul li ol, ul li ul {
-  margin-left: 5%;
+a:focus {
+  outline: 2px solid rgba(128, 0, 0, 0.4588235294);
 }
 
 li::marker {
@@ -93,24 +108,6 @@ li::marker {
 }
 .itemList ul li h2, .itemList ol li h2 {
   margin-left: 2rem;
-}
-
-abbr {
-  cursor: pointer;
-}
-abbr:focus::before {
-  font-family: "noto_sansregular", "Noto Sans", sans-serif;
-  font-size: 0.9375rem;
-  display: inline-block;
-  position: absolute;
-  visibility: visible;
-  max-width: 8.25rem;
-  border: 1px dotted #000000;
-  content: attr(title);
-  line-height: 1.15;
-  padding: 0.2em;
-  background-color: #f5f5f5;
-  color: #000000;
 }
 
 .symbol {
@@ -136,7 +133,7 @@ q {
 code {
   font-family: "noto_monoregular", "Noto Sans Mono", "Courier New", "Lucida Console", monospace;
   font-size: 0.95rem;
-  line-height: 1rem;
+  line-height: 1.25rem;
   padding: 0 0.25rem;
   border-radius: 0.25rem;
   border: 2px solid rgba(0, 0, 0, 0.0823529412);
@@ -170,7 +167,7 @@ table td, table th {
   border: 1px solid black;
 }
 table td, table th {
-  height: calc(3rem - 1px);
+  block-size: calc(3rem - 1px);
   padding: 0 1rem;
 }
 
@@ -181,22 +178,38 @@ th {
 .mybackground {
   display: flex;
   flex-flow: column nowrap;
-  min-height: 100vh;
-  max-width: 50rem;
+  min-block-size: 100vb;
+  max-inline-size: 800px;
   margin: 0 auto;
-  background: url("../images/redline.svg") 86.5% top/2px repeat-y, url("../images/rightboder.svg") 100% top/1px repeat-y, linear-gradient(to left, rgba(245, 245, 245, 0.6), rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 96%, #f5f5f5), url("../images/kletka.svg") left top/8rem 24rem repeat, #fefefe;
+  background: url("../images/redline.svg") 86.5% top/2px repeat-y, url("../images/rightboder.svg") 100% top/1px repeat-y, linear-gradient(to left, rgba(245, 245, 245, 0.6), rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 96%, #f5f5f5), url("../images/kletka.svg") left top/auto 20rlh repeat, #fefefe;
   box-shadow: 0 0 0.2rem lightgray;
   filter: drop-shadow(0 0 0.2rem lightgray);
   color: rgb(25, 25, 112);
 }
 
+a.sr-only {
+  position: absolute;
+  left: 0;
+  top: -2rlh;
+  padding: 0.25rem 1rem;
+  outline: unset;
+  color: #fff;
+  background-color: #ff0000;
+}
+
+a.sr-only:focus {
+  top: 0;
+  color: #fff;
+}
+
 header {
-  height: calc(4.5rem - 1px);
+  block-size: 4.5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   background: url("../images/topchik.svg") center top/100% 100% no-repeat, url("../images/012345.png") center top/100% 100% no-repeat, #fefefe;
   padding: 0 1.5rem;
+  margin-bottom: 0.325rem;
 }
 
 section {
@@ -208,66 +221,11 @@ section {
 }
 .stitle a {
   display: block;
-  height: 2rem;
+  block-size: 2rem;
 }
 
 .cool {
-  height: 2rem;
-}
-
-.mobile-menu {
-  display: none;
-}
-
-#main-nav {
-  visibility: visible;
-  align-self: flex-end;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-end;
-  margin-bottom: 0.25rem;
-}
-#main-nav a {
-  font-family: "aliceregular", "Alice", serif;
-  font-size: 1.375rem;
-  line-height: 1.1818;
-  text-decoration: none;
-  margin: 0 0.05rem;
-  padding: 0.125rem 0.75rem 0.25rem;
-  border: 2px solid rgba(25, 25, 112, 0.25);
-  border-radius: 1rem;
-  background-color: rgba(255, 255, 255, 0.3333333333);
-  color: rgb(25, 25, 112);
-}
-#main-nav a:visited {
-  color: rgb(25, 25, 112);
-}
-#main-nav .activePage {
-  padding-left: 0.35rem;
-}
-#main-nav .activePage a:visited {
-  color: darkred;
-}
-#main-nav .activePage::before {
-  display: inline-block;
-  position: relative;
-  top: 0.0625rem;
-  content: "🌟";
-  font-size: 1.15rem;
-  line-height: 1;
-  margin-right: 0.25rem;
-}
-#main-nav .subPage {
-  color: darkred !important;
-}
-#main-nav .subPage::after {
-  content: "…";
-  color: darkred;
-  margin-left: 0;
-}
-
-#subpage-nav {
-  display: none;
+  block-size: 2rem;
 }
 
 .all-content {
@@ -278,23 +236,17 @@ section {
 }
 
 main {
-  width: 83.5%;
+  inline-size: 83.5%;
   margin-left: 2.5%;
   margin-right: 0.5%;
 }
 
 section > h1:first-child, hgroup h1 {
-  margin: 0.95rem auto;
   text-align: center;
   text-shadow: 0 0 1.5rem rgba(25, 25, 112, 0.75);
 }
 
-hgroup h1 {
-  font-size: 2rem;
-}
-
 .postpage > h2:first-child {
-  margin-top: 0.4rem;
   padding-left: 2rem;
 }
 
@@ -303,15 +255,17 @@ hgroup h1 {
 }
 
 #myhello {
-  width: 100%;
+  inline-size: 100%;
   display: flex;
   flex-flow: row nowrap;
   overflow-x: auto;
-  margin-bottom: 3rem;
+  margin-bottom: calc(3rem - 1px);
 }
 #myhello p {
   font-family: "noto_sansregular", "Noto Sans", sans-serif;
   font-size: 1rem;
+  text-align: center;
+  hyphens: unset;
 }
 #myhello p::first-letter {
   font-weight: inherit;
@@ -335,39 +289,8 @@ hgroup h1 {
 }
 
 aside {
-  width: 13.5%;
+  inline-size: 13.5%;
   box-sizing: border-box;
-}
-aside #subpage-nav {
-  display: block;
-  background-color: rgba(255, 255, 0, 0.1450980392);
-  padding: 0.125rem 0;
-  border: none;
-}
-aside nav a {
-  display: block;
-  box-sizing: border-box;
-  text-decoration: none;
-  text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: "aliceregular", "Alice", serif;
-  font-size: 1.15rem;
-  padding: 0.25rem 0.25rem 0.5rem 1.1rem;
-  margin-bottom: 0.75rem;
-  color: mediumblue;
-}
-aside nav a:last-child {
-  margin-bottom: 0;
-}
-aside .activeUrl {
-  border: 4px solid rgba(0, 0, 0, 0.3137254902);
-  border-right: none;
-  border-top-left-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
-  background: url("../images/asign.svg") left center/0.75rem 0.75rem no-repeat;
-  padding: calc(0.25rem - 4px) 0.25rem calc(0.5rem - 4px) calc(1.1rem - 4px);
-  color: darkred;
 }
 
 .firstpage {
@@ -375,58 +298,118 @@ aside .activeUrl {
 }
 .firstpage p::first-letter {
   font-weight: bolder;
-  color: maroon;
+  color: #800000;
 }
 .firstpage p {
   font-size: 1.5rem;
 }
 
 footer {
-  height: 5rem;
-  align-items: center;
+  block-size: 5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  font-size: 1.15rem;
+  align-items: center;
   background: url("../images/dungeon.svg") center bottom/100% 100% no-repeat, #fefefe;
   padding: 0 1.5rem;
   margin-top: 0.5rem;
 }
 footer a {
   text-decoration: none;
+  display: block;
+  block-size: 1.875rem;
+}
+footer a img {
+  max-block-size: 100%;
+}
+footer .svg-icon {
+  block-size: 1.875rem;
+  fill: #696969;
 }
 
-.my-brand {
-  align-self: center;
-  font-weight: bolder;
-  border: none;
+.mobile-menu {
+  display: none;
+  align-self: flex-end;
+  cursor: pointer;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  margin-bottom: 0.25rem;
+  border: 3px solid rgba(25, 25, 112, 0.25);
+  background: rgba(0, 0, 255, 0.1);
+  border-radius: 0.5rem;
+  font-size: 2.25rem;
+  line-height: 1;
+  color: rgb(25, 25, 112);
+  caret-color: transparent;
+  outline: none;
 }
-.my-brand p {
-  line-height: 1.625rem;
-  font-family: "marck_scriptregular", "Marck Script", "Brush Script MT", cursive;
-}
-.my-brand p span {
-  font-family: emoji;
-  font-weight: bolder;
-  color: #828282;
+.mobile-menu:focus {
+  color: #800000;
+  border-color: rgba(128, 0, 0, 0.4588235294);
 }
 
-.social {
-  font-family: "marck_scriptregular", "Marck Script", "Brush Script MT", cursive;
+#main-nav {
+  align-self: flex-end;
+  margin-bottom: 0.25rem;
 }
-
-.svg-icon {
-  width: 16px;
-  height: 16px;
+#main-nav .allposts {
+  display: none;
+}
+#main-nav .main-cat {
+  display: flex;
+  column-gap: 0.25rem;
+  list-style-type: none;
+}
+#main-nav a {
+  display: block;
+  font-family: "aliceregular", "Alice", serif;
+  font-size: 1.375rem;
+  text-align: center;
+  line-height: 1.1818;
+  padding: 0.25rem 0.75rem;
+  max-inline-size: 10vw;
+  border: 3px solid rgba(25, 25, 112, 0.25);
+  border-radius: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.3333333333);
+  color: rgb(25, 25, 112);
+  text-decoration: none;
+  caret-color: transparent;
+}
+#main-nav a:visited {
+  color: rgb(25, 25, 112);
+}
+#main-nav a:focus {
+  outline: 0;
+  border-color: rgba(128, 0, 0, 0.4588235294);
+}
+#main-nav a.activePage:visited {
+  color: #800000;
+}
+#main-nav a.activePage::before {
   display: inline-block;
-  fill: #828282;
   position: relative;
-  top: 0.25rem;
+  top: 0.0625rem;
+  content: "🌟";
+  font-size: 1.15rem;
+  line-height: 1;
+  margin-right: 0.25rem;
+}
+#main-nav .main-cat .postscat {
+  color: darkred;
+}
+#main-nav .main-cat .postscat::after {
+  content: " …";
+  color: darkred;
+  margin-left: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+  .mybackground {
+    background: url("../images/rightboder.svg") 100% top/1px repeat-y, linear-gradient(to left, rgba(245, 245, 245, 0.6), rgba(255, 255, 255, 0) 4%, rgba(255, 255, 255, 0) 96%, #f5f5f5), url("../images/kletka.svg") left top/auto 20rlh repeat, #fefefe;
+    overflow-x: hidden;
+  }
   #myhello .scarec {
-    height: 4.5rem;
+    block-size: 4.5rem;
     margin-right: 0.5rem;
   }
   main {
@@ -437,65 +420,132 @@ footer a {
     display: none;
   }
   .mobile-menu {
-    display: block;
-    cursor: pointer;
-    margin: auto 0 0.25rem;
-    border: 3px solid rgba(25, 25, 112, 0.25);
-    background: rgba(0, 0, 255, 0.1);
-    border-radius: 0.5rem;
-    font-size: 2rem;
-    line-height: 1;
-    color: rgb(25, 25, 112);
-  }
-  .mobile-menu span {
-    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #main-nav {
-    flex-flow: column nowrap;
     visibility: hidden;
     position: absolute;
-    top: 4.4375rem;
+    top: 4.25rem;
     right: 0;
-    min-width: 11rem;
-    max-width: 75%;
-    border-left: 1px solid rgba(25, 25, 112, 0.25);
-    border-bottom: 1px solid rgba(25, 25, 112, 0.25);
-    border-collapse: collapse;
-    background-color: #fff;
+    max-inline-size: 75vw;
+    padding-top: 0.25rem;
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(100%);
+    transform-origin: right top;
+    transition-property: transform, visibility, opacity;
+    transition-duration: 500ms;
   }
   #main-nav a {
-    display: block;
-    height: auto;
+    max-inline-size: 72vw;
+    min-inline-size: 11ch;
+  }
+  #main-nav .main-cat {
+    flex-flow: column nowrap;
+    column-gap: unset;
+    padding: 0.35rem 1.5rem 0.25rem 0.25rem;
     background-color: #fff;
-    height: 2.5rem;
-    line-height: 2.4rem;
-    padding-left: 7.5%;
-    margin: 0;
+  }
+  #main-nav .main-cat .menu-item ~ .menu-item {
+    padding-top: 0.5rem;
+  }
+  #main-nav .main-cat .menu-item a {
+    padding: 0.5rem 0.25rem;
+    font-size: 1.5rem;
+    line-height: 1;
     border: unset;
-    border-radius: unset;
-    border-top: 1px solid rgba(25, 25, 112, 0.25);
+    box-shadow: inset 0 0 0.65rem rgba(0, 0, 205, 0.75);
+    overflow-x: hidden;
+    text-overflow: ellipsis;
   }
-  #main-nav #subpage-nav {
-    display: block;
-    max-height: 12rem;
+  #main-nav .main-cat .menu-item a:focus {
+    outline: solid rgba(128, 0, 0, 0.4588235294);
+  }
+  #main-nav .main-cat .menu-item a.postscat {
+    background-color: rgba(255, 255, 0, 0.0196078431);
+    box-shadow: inset 0 0 0.75rem 0.1rem rgba(128, 0, 0, 0.4588235294);
+  }
+  #main-nav .main-cat .allposts {
+    display: flex;
+    flex-flow: column nowrap;
+    margin-left: 1rem;
+    padding: 0 0.175rem 0.25rem 0;
+    border-left: 4px solid rgba(128, 0, 0, 0.4588235294);
+    max-block-size: 20rem;
     overflow-y: auto;
-    background-color: #ffffff;
   }
-  #main-nav #subpage-nav a {
-    background-color: #fff;
-    padding: 0.2rem 0.2rem 0.2rem 15%;
-    height: auto;
-    width: auto;
-    border: none;
-    border-top: 1px dotted darkred;
-    line-height: 2rem;
-    color: mediumblue;
-  }
-  #main-nav #subpage-nav .activeUrl {
-    background: url("../images/asign.svg") 0.5rem center/0.75rem 0.75rem no-repeat, #f5f5f5;
+  #main-nav .main-cat .allposts .menu-item .activePost {
+    background: url("../images/asign.svg") left center/0.75rem 0.75rem no-repeat, rgba(255, 255, 0, 0.031372549);
     color: darkred;
   }
+  #main-nav .main-cat .allposts .menu-item {
+    padding-left: 0;
+    padding-top: 0.25rem;
+  }
+  #main-nav .main-cat .allposts .menu-item ~ .menu-item {
+    border-top: thin solid #800000;
+  }
+  #main-nav .main-cat .allposts .menu-item a {
+    display: block;
+    color: rgb(0, 0, 205);
+    padding: 0.5rem 1rem;
+    font-size: 1.3125rem;
+    border-radius: unset;
+    box-shadow: none;
+    background-color: rgba(255, 255, 0, 0.031372549);
+  }
+  .mobile-menu:is(:hover, :focus) + #main-nav, #main-nav:is(:hover, :focus-within) {
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
 }
+#category-nav {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.1rem 0;
+  border: none;
+  margin-top: 1.105rem;
+}
+#category-nav .allposts {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+#category-nav .allposts .menu-item {
+  text-align: center;
+  margin-bottom: 0.65rem;
+}
+#category-nav .allposts .menu-item a {
+  display: block;
+  text-decoration: none;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-family: "aliceregular", "Alice", serif;
+  font-size: 1.15rem;
+  padding: 0.275rem 0.25rem 0.575rem 1rem;
+  background-color: rgba(255, 255, 0, 0.1450980392);
+  color: rgb(0, 0, 205);
+}
+#category-nav .allposts .menu-item a:focus {
+  outline: medium solid rgba(128, 0, 0, 0.4588235294);
+}
+#category-nav .allposts .menu-item a:last-child {
+  margin-bottom: 0;
+}
+#category-nav .allposts .menu-item .activePost {
+  border: 4px solid rgba(128, 0, 0, 0.4588235294);
+  border-right: none;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  background: url("../images/asign.svg") left center/0.75rem 0.75rem no-repeat;
+  padding: calc(0.275rem - 4px) 0.25rem calc(0.575rem - 4px) calc(1rem - 4px);
+  background-color: rgba(255, 255, 0, 0.1450980392);
+  color: #800000;
+}
+
 #showDialog {
   display: inline;
   cursor: pointer;
@@ -506,42 +556,27 @@ footer a {
   font-size: 1rem;
   color: rgb(25, 25, 112);
 }
-#showDialog::before {
-  content: "👉";
-  font-family: emoji;
-  font-size: 1.1rem;
-  line-height: 0.75;
-  margin-right: 0.2rem;
-}
-#showDialog::after {
-  content: "👈";
-  font-family: emoji;
-  font-size: 1.1rem;
-  line-height: 0.75;
-  margin-left: 0.2rem;
-}
 
-.greeting {
+#greeting {
   margin: auto auto;
   border: 0.35rem double #4b0082;
   border-radius: 1rem;
   background-color: #ffffff;
 }
-.greeting::backdrop {
+#greeting::backdrop {
   background-color: rgba(0, 0, 0, 0.85);
 }
-.greeting #inputName {
+#greeting #inputName {
   padding: 2.5rem 0.5rem 1rem 0.5rem;
 }
-.greeting label {
+#greeting label {
   display: block;
   padding-bottom: 0.1rem;
   font-family: "aliceregular", "Alice", serif;
   font-size: 1.5rem;
   color: rgb(25, 25, 112);
 }
-
-#insertName {
+#greeting #insertName {
   background-color: #dcdcdc;
   font-size: 1.15rem;
   font-family: "aliceregular", "Alice", serif;
@@ -553,12 +588,16 @@ footer a {
   margin: 0.5rem 0 1rem;
   box-sizing: border-box;
 }
-#insertName:focus {
+#greeting #insertName:focus {
   background-color: #f5f5f5;
   outline: none;
 }
-
-#confirmBtn {
+#greeting .errStyle {
+  border-color: crimson;
+  border-style: solid;
+  box-shadow: 0 0 5px 3px crimson;
+}
+#greeting #confirmBtn {
   display: inline-block;
   outline: none;
   cursor: pointer;
@@ -571,17 +610,16 @@ footer a {
   background-color: #ffffff;
   box-shadow: inset 0 0 3px 1px #000000;
 }
-#confirmBtn:hover, #confirmBtn:focus {
+#greeting #confirmBtn:hover, #greeting #confirmBtn:focus {
   color: rgb(0, 100, 0);
   box-shadow: inset 0 0 3px 1px rgb(0, 100, 0);
   border: 1px solid rgb(0, 100, 0);
 }
-
-.cancel {
+#greeting .cancel {
   display: block;
   cursor: pointer;
   position: absolute;
-  width: 1.75rem;
+  inline-size: 1.75rem;
   top: 0.125rem;
   right: 0.125rem;
   background: none;
@@ -590,37 +628,33 @@ footer a {
   text-align: center;
   color: rgb(25, 25, 112);
 }
-.cancel:hover, .cancel:focus {
+#greeting .cancel:hover, #greeting .cancel:focus {
   border: 3px solid red;
   color: red;
 }
-.cancel span {
+#greeting .cancel span {
   font-size: 1.5rem;
   line-height: 1;
 }
-
-.error {
+#greeting .error {
   display: block;
   position: absolute;
-  top: 0.5rem;
+  bottom: 3.75rem;
   left: 1px;
-  overflow: visible;
-  width: 13.3rem;
+  inline-size: 13.3rem;
   padding: 0;
   font-family: "noto_sansregular", "Noto Sans", sans-serif;
   font-size: 95%;
+  line-height: 1.25;
   color: #ffffff;
   background-color: rgba(0, 0, 0, 0.75);
   border-radius: 0.3rem;
   box-sizing: border-box;
 }
-
-.error.active {
-  height: 4rem;
+#greeting .active {
   padding: 0.5rem;
 }
-
-.error.active.color {
+#greeting .color {
   background-color: rgba(128, 0, 0, 0.75);
 }
 
