@@ -1,0 +1,18 @@
+url: "https://petrushya.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "PRush" # the name of your site, e.g. ACME Corp.
+description: >
+  Персональный веб-сайт и портфолио начинающего вебразработчика petrushya.
+github_username: petrushya
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+include: [_pages]
+
+exclude: ["LICENSE", "README.md", "**/README.md"]

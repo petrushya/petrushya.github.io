@@ -1,0 +1,27 @@
+---
+---
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: "ru-RU" }}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    {% if page.permalink == "/404.html" %}
+      <link rel="stylesheet" href="{{ "/assets/css/404.css" | relative_url}}" />
+    {% endif %}
+    <link rel="icon" href="{{ "assets/images/logo.png" | relative_url }}" type="img/png" />
+  </head>
+  <body>
+    <header class="wrapper">
+      <a href="/" class="site-title">PRush</a>
+      {% include nav.html %}
+    </header>
+    <hr />
+    <main class="wrapper">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </body>
+  </body>
+</html>

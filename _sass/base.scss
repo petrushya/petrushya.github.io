@@ -1,0 +1,59 @@
+$bodyFont: sans-serif;
+:root {
+  color-scheme: dark light;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: $bodyFont;
+}
+body {
+  min-height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper {
+  max-width: 90ch;
+}
+header {
+  height: 106px;
+  background: center top / cover url("../images/hbg.webp");
+  padding-block: 3px;
+}
+.site-title {
+  text-decoration: unset;
+  font-size: 5.25rem;
+  font-weight: 800;
+  letter-spacing: -3px;
+  color: graytext;
+}
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1.125rem;
+}
+main {
+  flex: 1;
+}
+hr {
+  border-color: graytext;
+  opacity:0.125;
+  margin: unset;
+}
+header,
+main,
+footer,
+hr {
+  width: 100%;
+  padding-inline: 1ch;
+}
+@media (prefers-color-scheme: dark) {
+  header {
+    background: center top / cover url("../images/hbgi.webp");
+  }
+}
