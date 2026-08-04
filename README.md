@@ -1,2 +1,2 @@
 # petrushya.github.io
-user's personal pages
+Персональные веб-страницы юзера petrushya.
